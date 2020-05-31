@@ -1,0 +1,22 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange='handleTabsItemChange'>
+    <view class="collect_main">
+        <view class="collect_title">
+            <text class="collect_title_item active">全部</text>
+            <text class="collect_title_item">正在热卖</text>
+            <text class="collect_title_item">即将上线</text>
+        </view>
+        <view class="collect_content">
+            <navigator class="goods_item" wx:for="{{collect}}" wx::key="goods_id" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+                <!-- 左侧图片 -->
+                <view class="goods_img">
+                    <image src="{{item.goods_small_logo?item.goods_small_logo:'https://i.loli.net/2020/04/01/xnQJf28PTGekmrO.jpg'}}" mode="widthFix" />
+                </view>
+                <view class="goods_info">
+                    <view class="goods_name">{{item.goods_name}}</view>
+                    <view class="goods_price">{{item.goods_price}}</view>
+                </view>
+                <!-- 右侧商品 -->
+            </navigator>
+        </view>
+    </view>
+</Tabs>

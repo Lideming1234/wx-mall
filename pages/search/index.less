@@ -1,0 +1,48 @@
+page {
+  background-color: #dedede;
+  padding: 20rpx;
+}
+.search_row {
+  height: 60rpx;
+  display: flex;
+  input {
+    background-color: #fff;
+    height: 100%;
+    flex: 5;
+    border-radius: 10rpx;
+    padding-left: 30rpx;
+  }
+
+  button {
+    height: 100%;
+    flex: 1;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26rpx;
+    margin-left: 15rpx !important;
+    border-radius: 10rpx;
+  }
+}
+
+.search_content {
+  margin-top: 25rpx;
+  .search_item {
+    background-color: #fff;
+    font-size: 26rpx;
+    padding: 15rpx 10rpx;
+    border-bottom: 1rpx solid #ccc;
+
+    // 多行文本超出显示省略号
+    // display: -webkit-box;
+    // overflow: hidden;
+    // -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 1;
+
+    //单行文本超出显示省略号
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
